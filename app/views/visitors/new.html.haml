@@ -1,0 +1,16 @@
+- content_for :title do
+  Foobar Kadigan
+- content_for :description do
+  Website of Foobar Kadigan
+%section
+  %img{:src => "http://lorempixel.com/1170/600/cats/1"}
+%section
+  .column
+    %h2 Stay in touch.
+  .column
+    .form-centered
+      = simple_form_for @visitor do |f|
+        = f.error_notification
+        = f.input :email, label: false, :placeholder => 'Your email address...'
+        %br/
+        = f.button :submit, "Sign up for the newsletter", :class => "submit"
